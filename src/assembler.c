@@ -48,7 +48,6 @@ int *compile(FILE *script, int i){
                 curr_instr++;
                 instr = strtok(NULL," \n");
                 commands[curr_instr] = regcmp(instr);
-
             }
             else if(!strcmp(instr,"JMP"))
             { commands[curr_instr] = JMP; }
@@ -56,7 +55,6 @@ int *compile(FILE *script, int i){
                 commands[curr_instr] = NUM_OF_INSTRUCTIONS;
             }
             curr_instr++;
-
             instr = strtok(NULL," \n");
             while(instr != NULL){
                 commands[curr_instr] = atoi(instr);
